@@ -5,6 +5,14 @@ var rewindButton = document.getElementById("js-rewind-button");
 var forwardButton = document.getElementById("js-forward-button");
 var player = new Player();
 var videoPlayer = player.getVideoPlayer(videoPlayerSource);
+var toggleVideoPlayer = function (videoPlayer) {
+    if (videoPlayer.isPlaying) {
+        videoPlayer.pause();
+    }
+    else {
+        videoPlayer.play();
+    }
+};
 var togglePlayButtonIcon = function (isPlaying) {
     if (isPlaying) {
         playPauseButton.src = "./src/assets/icons/pause.svg";
@@ -14,12 +22,7 @@ var togglePlayButtonIcon = function (isPlaying) {
     }
 };
 playPauseButton.addEventListener("click", function () {
-    if (videoPlayer.isPlaying) {
-        videoPlayer.pause();
-    }
-    else {
-        videoPlayer.play();
-    }
+    toggleVideoPlayer(videoPlayer);
     togglePlayButtonIcon(videoPlayer.isPlaying);
 });
 forwardButton.addEventListener("click", function () {

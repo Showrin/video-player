@@ -1,4 +1,5 @@
 import Player from "./player/Player.js";
+import VideoPlayer from "./player/VideoPlayer.js";
 
 const videoPlayerSource: any = document.getElementById("js-video-player");
 const playPauseButton: any = document.getElementById("js-play-pause-button");
@@ -7,6 +8,14 @@ const forwardButton: any = document.getElementById("js-forward-button");
 
 const player = new Player();
 const videoPlayer = player.getVideoPlayer(videoPlayerSource);
+
+const toggleVideoPlayer = (videoPlayer: VideoPlayer) => {
+  if (videoPlayer.isPlaying) {
+    videoPlayer.pause();
+  } else {
+    videoPlayer.play();
+  }
+};
 
 const togglePlayButtonIcon = (isPlaying: boolean) => {
   if (isPlaying) {
@@ -17,12 +26,7 @@ const togglePlayButtonIcon = (isPlaying: boolean) => {
 };
 
 playPauseButton.addEventListener("click", () => {
-  if (videoPlayer.isPlaying) {
-    videoPlayer.pause();
-  } else {
-    videoPlayer.play();
-  }
-
+  toggleVideoPlayer(videoPlayer);
   togglePlayButtonIcon(videoPlayer.isPlaying);
 });
 

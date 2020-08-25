@@ -65,3 +65,35 @@ This program has following development dependencies.
 | @babel/plugin-transform-modules-commonjs | ^7.10.4 | It's being used for using ES6 import-export in node |
 | jest                                     | ^26.4.1 | It's being used for writing and running tests       |
 | typescript                               | 3.1     | It's being used for compiling typescript file       |
+
+<br/>
+
+## Pseudocode
+
+```
+// -----------Create Video-----------
+put the video element in a variable named video
+create player instance from Player class
+create videoPlayer instance from palyer.getVideoPlayer(video)
+
+
+// -----------For play()-----------
+fire video.play()
+set isPlaying = true
+
+
+// -----------For pause()-----------
+fire video.pause()
+set isPlaying = false
+
+
+// -----------For forward(time: number)-----------
+increase video.currentTime by time
+
+
+// -----------For rewind(time: number)-----------
+decrease video.currentTime by time
+
+```
+
+<br/>

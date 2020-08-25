@@ -25,6 +25,10 @@ playPauseButton.addEventListener("click", function () {
     toggleVideoPlayer(videoPlayer);
     togglePlayButtonIcon(videoPlayer.isPlaying);
 });
+videoPlayerSource.addEventListener("click", function () {
+    toggleVideoPlayer(videoPlayer);
+    togglePlayButtonIcon(videoPlayer.isPlaying);
+});
 forwardButton.addEventListener("click", function () {
     videoPlayer.forward(5);
 });

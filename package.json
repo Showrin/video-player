@@ -8,6 +8,7 @@
     "test": "jest"
   },
   "repository": "git@github.com:Showrin/video-player.git",
+  "homepage": "https://epic-curran-723523.netlify.app/",
   "author": "Showrin <showrinece15@gmail.com>",
   "license": "MIT",
   "private": false,

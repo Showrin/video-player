@@ -208,3 +208,9 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 And your changes will be visible [https://angry-shirley-396fd7.netlify.app/](https://angry-shirley-396fd7.netlify.app/) here after getting merged into the master.
+
+<br/>
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

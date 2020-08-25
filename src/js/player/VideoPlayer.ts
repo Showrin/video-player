@@ -18,7 +18,9 @@ export default class VideoPlayer implements PlayerInterface {
     this.isPlaying = false;
   }
 
-  forward(): void {}
+  forward(time: number): void {
+    this.source.currentTime += time;
+  }
 
   rewind(): void {}
 }

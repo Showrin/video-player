@@ -3,9 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>HTML Video Player</title>
   </head>
   <body>
-    <video src="./src/assets/videos/demo.mp4"></video>
+    <div class="video">
+      <video
+        id="js-video-player"
+        class="video__player"
+        src="./src/assets/videos/demo.mp4"
+      ></video>
+      <div class="video__controls">
+        <img
+          id="js-forward-button"
+          class="video__controls-button"
+          src="./src/assets/icons/backward.svg"
+          alt="backward-btn"
+        />
+        <img
+          id="js-play-pause-button"
+          class="video__controls-button video__controls-play"
+          src="./src/assets/icons/play.svg"
+          alt="play-btn"
+        />
+        <img
+          id="js-rewind-button"
+          class="video__controls-button"
+          src="./src/assets/icons/forward.svg"
+          alt="forward-btn"
+        />
+      </div>
+    </div>
   </body>
 </html>

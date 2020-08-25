@@ -6,19 +6,13 @@ var VideoPlayer = /** @class */ (function () {
     VideoPlayer.prototype.play = function () {
         this.source.play();
         this.isPlaying = true;
-        // return null;
     };
     VideoPlayer.prototype.pause = function () {
         this.source.pause();
         this.isPlaying = false;
-        // return null;
     };
-    VideoPlayer.prototype.forward = function () {
-        // return null;
-    };
-    VideoPlayer.prototype.rewind = function () {
-        // return null;
-    };
+    VideoPlayer.prototype.forward = function () { };
+    VideoPlayer.prototype.rewind = function () { };
     return VideoPlayer;
 }());
 export default VideoPlayer;

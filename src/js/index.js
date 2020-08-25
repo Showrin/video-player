@@ -6,7 +6,6 @@ var forwardButton = document.getElementById("js-forwrd-button");
 var player = new Player();
 var videoPlayer = player.getVideoPlayer(videoPlayerSource);
 var togglePlayButtonIcon = function (isPlaying) {
-    console.log(isPlaying);
     if (isPlaying) {
         playPauseButton.src = "./src/assets/icons/pause.svg";
     }

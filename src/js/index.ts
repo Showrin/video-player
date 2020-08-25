@@ -9,7 +9,6 @@ const player = new Player();
 const videoPlayer = player.getVideoPlayer(videoPlayerSource);
 
 const togglePlayButtonIcon = (isPlaying: boolean) => {
-  console.log(isPlaying);
   if (isPlaying) {
     playPauseButton.src = "./src/assets/icons/pause.svg";
   } else {

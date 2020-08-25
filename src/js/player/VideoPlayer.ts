@@ -11,20 +11,14 @@ export default class VideoPlayer implements PlayerInterface {
   play(): void {
     this.source.play();
     this.isPlaying = true;
-    // return null;
   }
 
   pause(): void {
     this.source.pause();
     this.isPlaying = false;
-    // return null;
   }
 
-  forward(): void {
-    // return null;
-  }
+  forward(): void {}
 
-  rewind(): void {
-    // return null;
-  }
+  rewind(): void {}
 }

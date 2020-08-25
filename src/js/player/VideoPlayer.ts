@@ -4,7 +4,7 @@ export default class VideoPlayer implements PlayerInterface {
   private source: HTMLMediaElement;
   isPlaying: boolean = false;
 
-  constructor(source: any) {
+  constructor(source: HTMLMediaElement) {
     this.source = source;
   }
 

@@ -29,3 +29,7 @@ playPauseButton.addEventListener("click", () => {
 forwardButton.addEventListener("click", () => {
   videoPlayer.forward(5);
 });
+
+rewindButton.addEventListener("click", () => {
+  videoPlayer.rewind(5);
+});

@@ -13,6 +13,9 @@ const rewindButton = <HTMLMediaElement>(
 const forwardButton = <HTMLMediaElement>(
   document.getElementById("js-forward-button")
 );
+const progressBar = <HTMLMediaElement>(
+  document.getElementById("js-progress-bar")
+);
 
 const player = new Player();
 const videoPlayer = player.getVideoPlayer(videoPlayerSource);
@@ -50,3 +53,7 @@ forwardButton.addEventListener("click", () => {
 rewindButton.addEventListener("click", () => {
   videoPlayer.rewind(5);
 });
+
+videoPlayerSource.ontimeupdate = () => {
+  progressBar.style.width = `${videoPlayer.played()}%`;
+};

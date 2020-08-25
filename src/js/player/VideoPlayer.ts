@@ -8,6 +8,10 @@ export default class VideoPlayer implements PlayerInterface {
     this.source = source;
   }
 
+  played(): number {
+    return (this.source.currentTime / this.source.duration) * 100;
+  }
+
   play(): void {
     this.source.play();
     this.isPlaying = true;

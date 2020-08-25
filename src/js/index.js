@@ -3,6 +3,7 @@ var videoPlayerSource = (document.getElementById("js-video-player"));
 var playPauseButton = (document.getElementById("js-play-pause-button"));
 var rewindButton = (document.getElementById("js-rewind-button"));
 var forwardButton = (document.getElementById("js-forward-button"));
+var progressBar = (document.getElementById("js-progress-bar"));
 var player = new Player();
 var videoPlayer = player.getVideoPlayer(videoPlayerSource);
 var toggleVideoPlayer = function (videoPlayer) {
@@ -35,3 +36,6 @@ forwardButton.addEventListener("click", function () {
 rewindButton.addEventListener("click", function () {
     videoPlayer.rewind(5);
 });
+videoPlayerSource.ontimeupdate = function () {
+    progressBar.style.width = videoPlayer.played() + "%";
+};

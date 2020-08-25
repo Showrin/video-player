@@ -3,6 +3,9 @@ var VideoPlayer = /** @class */ (function () {
         this.isPlaying = false;
         this.source = source;
     }
+    VideoPlayer.prototype.played = function () {
+        return (this.source.currentTime / this.source.duration) * 100;
+    };
     VideoPlayer.prototype.play = function () {
         this.source.play();
         this.isPlaying = true;

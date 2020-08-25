@@ -2,7 +2,7 @@ import Player from "./player/Player.js";
 var videoPlayerSource = document.getElementById("js-video-player");
 var playPauseButton = document.getElementById("js-play-pause-button");
 var rewindButton = document.getElementById("js-rewind-button");
-var forwardButton = document.getElementById("js-forwrd-button");
+var forwardButton = document.getElementById("js-forward-button");
 var player = new Player();
 var videoPlayer = player.getVideoPlayer(videoPlayerSource);
 var togglePlayButtonIcon = function (isPlaying) {
@@ -21,4 +21,7 @@ playPauseButton.addEventListener("click", function () {
         videoPlayer.play();
     }
     togglePlayButtonIcon(videoPlayer.isPlaying);
+});
+forwardButton.addEventListener("click", function () {
+    videoPlayer.forward(5);
 });

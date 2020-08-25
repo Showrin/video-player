@@ -3,7 +3,7 @@ import Player from "./player/Player.js";
 const videoPlayerSource: any = document.getElementById("js-video-player");
 const playPauseButton: any = document.getElementById("js-play-pause-button");
 const rewindButton: any = document.getElementById("js-rewind-button");
-const forwardButton: any = document.getElementById("js-forwrd-button");
+const forwardButton: any = document.getElementById("js-forward-button");
 
 const player = new Player();
 const videoPlayer = player.getVideoPlayer(videoPlayerSource);
@@ -24,4 +24,8 @@ playPauseButton.addEventListener("click", () => {
   }
 
   togglePlayButtonIcon(videoPlayer.isPlaying);
+});
+
+forwardButton.addEventListener("click", () => {
+  videoPlayer.forward(5);
 });

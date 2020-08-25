@@ -12,14 +12,6 @@ Go to the link: [https://angry-shirley-396fd7.netlify.app/](https://angry-shirle
 
 ## Project Setup
 
-First install **`Typescript`** globally.
-
-```
-$ npm i -g typescript
-```
-
-<br/>
-
 Clone the repo first. To do so, go to the directory where you want to keep this repo. Then open the terminal from here and run the following command.
 
 ```

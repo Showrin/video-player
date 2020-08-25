@@ -54,4 +54,14 @@ $ npm install
 
 Now open the **`index.html`** file with any browser and you will get the following UI. Here you can play or pause the video. And you can also rewind and play forward the video.
 
-![html-video-player-by-Showrin](https://i.imgur.com/4KTScvF.png)
+![html-video-player-by-Showrin](https://i.imgur.com/4KTScvF.png)<br/>
+
+## Dev Dependencies
+
+This program has following development dependencies.
+
+| Module Name                              | Version | Why it's used                                       |
+| ---------------------------------------- | ------- | --------------------------------------------------- |
+| @babel/plugin-transform-modules-commonjs | ^7.10.4 | It's being used for using ES6 import-export in node |
+| jest                                     | ^26.4.1 | It's being used for writing and running tests       |
+| typescript                               | 3.1     | It's being used for compiling typescript file       |

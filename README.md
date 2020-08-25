@@ -54,7 +54,9 @@ $ npm install
 
 Now open the **`index.html`** file with any browser and you will get the following UI. Here you can play or pause the video. And you can also rewind and play forward the video.
 
-![html-video-player-by-Showrin](https://i.imgur.com/4KTScvF.png)<br/>
+![html-video-player-by-Showrin](https://i.imgur.com/4KTScvF.png)
+
+<br/>
 
 ## Dev Dependencies
 
@@ -158,7 +160,7 @@ class VideoPlayer implements PlayerInterface {
 
 <br />
 
-Then, the `Player` class is implemented **that defines which player should be created**.
+Then, the `Player` **(factory)** class is implemented **that defines which player should be created**.
 
 ```
 class Player {

@@ -1,7 +1,7 @@
 import PlayerInterface from "./PlayerInterface.js";
 
 export default class VideoPlayer implements PlayerInterface {
-  private source: any;
+  private source: HTMLMediaElement;
   isPlaying: boolean = false;
 
   constructor(source: any) {

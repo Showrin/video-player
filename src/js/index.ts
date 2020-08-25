@@ -1,10 +1,18 @@
 import Player from "./player/Player.js";
 import VideoPlayer from "./player/VideoPlayer.js";
 
-const videoPlayerSource: any = document.getElementById("js-video-player");
-const playPauseButton: any = document.getElementById("js-play-pause-button");
-const rewindButton: any = document.getElementById("js-rewind-button");
-const forwardButton: any = document.getElementById("js-forward-button");
+const videoPlayerSource = <HTMLMediaElement>(
+  document.getElementById("js-video-player")
+);
+const playPauseButton = <HTMLMediaElement>(
+  document.getElementById("js-play-pause-button")
+);
+const rewindButton = <HTMLMediaElement>(
+  document.getElementById("js-rewind-button")
+);
+const forwardButton = <HTMLMediaElement>(
+  document.getElementById("js-forward-button")
+);
 
 const player = new Player();
 const videoPlayer = player.getVideoPlayer(videoPlayerSource);

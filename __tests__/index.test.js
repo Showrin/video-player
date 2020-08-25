@@ -1,4 +1,4 @@
-import Player from "../src/js/player/Player.js";
+import Player from "../dist/player/Player.js";
 
 const player = new Player();
 const videoPlayer = player.getVideoPlayer();

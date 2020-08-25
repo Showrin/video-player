@@ -180,3 +180,21 @@ const videoPlayerSource = <HTMLMediaElement>(
 const player = new Player();
 const videoPlayer = player.getVideoPlayer(videoPlayerSource);
 ```
+
+<br/>
+
+## Run Tests
+
+You can run tests using this command in the console.
+
+```
+yarn test
+```
+
+<br/>
+
+Or use the following if you are using npm.
+
+```
+npm test
+```

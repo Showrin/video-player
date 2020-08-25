@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "A HTML video player with basic functionalities",
   "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -w"
+  },
   "repository": "git@github.com:Showrin/video-player.git",
   "author": "Showrin <showrinece15@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "typescript": "3.1"
+  }
 }

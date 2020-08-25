@@ -97,3 +97,86 @@ decrease video.currentTime by time
 ```
 
 <br/>
+
+<br/>
+
+## Used Design Pattern: Factory Design Pattern
+
+> **Here Factory Design Pattern has been used for implementing play(), pause(), forward(), rewind() functionalities**
+
+<br/>
+
+First, the interface for `Player` is implemented.
+
+```
+interface PlayerInterface {
+  isPlaying: boolean;
+  played(): number;
+  play(): void;
+  pause(): void;
+  forward(time: number): void;
+  rewind(time: number): void;
+}
+```
+
+<br />
+
+Then, `VideoPlayer` class is implemented using the `PlayerInterface` interface.
+
+```
+class VideoPlayer implements PlayerInterface {
+  private source: HTMLMediaElement;
+  isPlaying: boolean = false;
+
+  constructor(source: HTMLMediaElement) {
+    this.source = source;
+  }
+
+  played(): number {
+    return (this.source.currentTime / this.source.duration) * 100;
+  }
+
+  play(): void {
+    this.source.play();
+    this.isPlaying = true;
+  }
+
+  pause(): void {
+    this.source.pause();
+    this.isPlaying = false;
+  }
+
+  forward(time: number): void {
+    this.source.currentTime += time;
+  }
+
+  rewind(time: number): void {
+    this.source.currentTime -= time;
+  }
+}
+```
+
+<br />
+
+Then, the `Player` class is implemented **that defines which player should be created**.
+
+```
+class Player {
+  getVideoPlayer(source: HTMLMediaElement): VideoPlayer {
+    return new VideoPlayer(source);
+  }
+}
+```
+
+<br />
+
+And now, it's time to create `VideoPlayer` from this Factory Design Pattern.
+
+```
+const videoPlayerSource = <HTMLMediaElement>(
+  document.getElementById("js-video-player")
+);
+
+const player = new Player();
+const videoPlayer = player.getVideoPlayer(videoPlayerSource);
+```

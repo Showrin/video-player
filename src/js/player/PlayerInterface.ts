@@ -3,5 +3,5 @@ export default interface PlayerInterface {
   play(): void;
   pause(): void;
   forward(time: number): void;
-  rewind(): void;
+  rewind(time: number): void;
 }

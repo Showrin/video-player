@@ -4,13 +4,16 @@
   "description": "A HTML video player with basic functionalities",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc -w"
+    "tsc": "tsc -w",
+    "test": "jest"
   },
   "repository": "git@github.com:Showrin/video-player.git",
   "author": "Showrin <showrinece15@gmail.com>",
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "jest": "^26.4.1",
     "typescript": "3.1"
   }
 }

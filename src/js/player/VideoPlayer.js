@@ -14,7 +14,9 @@ var VideoPlayer = /** @class */ (function () {
     VideoPlayer.prototype.forward = function (time) {
         this.source.currentTime += time;
     };
-    VideoPlayer.prototype.rewind = function () { };
+    VideoPlayer.prototype.rewind = function (time) {
+        this.source.currentTime -= time;
+    };
     return VideoPlayer;
 }());
 export default VideoPlayer;

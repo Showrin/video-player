@@ -44,6 +44,24 @@ $ npm install
 
 <br/>
 
+<br/>
+
+After that, if you are using **`yarn`**, transpile typescript files by running the following command.
+
+```
+$ yarn tsc
+```
+
+<br/>
+
+Or use the following command if you are using **`npm`**.
+
+```
+$ npm run tsc
+```
+
+<br/>
+
 Now open the **`index.html`** file with any browser and you will get the following UI. Here you can play or pause the video. And you can also rewind and play forward the video.
 
 ![html-video-player-by-Showrin](https://i.imgur.com/4KTScvF.png)
